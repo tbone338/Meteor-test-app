@@ -6,6 +6,7 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> checkList}}
+  {{> buttonList}}
 </body>
 
 <template name="checkList">
@@ -16,4 +17,10 @@
     <ul><input type="checkbox"><span>{{text}}</span></ul>
   {{/each}}
 </li>
+</template>
+
+<template name="buttonList">
+  {{#each allButtons}}
+    <button class="add-item" type="button">{{name}}</button>
+  {{/each}}
 </template>

@@ -13,9 +13,20 @@ if (Meteor.isClient) {
     }
   });
 
+
   Template.checkList.helpers({
     items : function() {
       return Items.find();
+    },
+    allButtons : function() {
+      return [
+        {
+          name : "Taylor",
+        },
+        {
+          name : "Clay",
+        },
+      ];
     },
   });
 }
