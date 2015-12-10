@@ -1,0 +1,19 @@
+<head>
+  <title>testApp</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> checkList}}
+</body>
+
+<template name="checkList">
+<input id="new-item-text" type="text">
+<button class="add-item" type="button">Add</button>
+<li>
+  {{#each items}}
+    <ul><input type="checkbox"><span>{{text}}</span></ul>
+  {{/each}}
+</li>
+</template>
