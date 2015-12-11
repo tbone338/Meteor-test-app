@@ -4,6 +4,7 @@ if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
 
+  Session.set('show_button', false);
 
 
   Template.checkList.events({
@@ -33,10 +34,37 @@ if (Meteor.isClient) {
           name : "Taylor",
         },
       ];
-    },
-
+    }
   });
+
+  Template.buttons.helpers({
+    text : function(){
+      return "foo";
+    },
+    show_button : function(){
+      return Session.get('show_button');
+    }
+  });
+
+  Template.headings.helpers({
+    headings : function(){
+      return [
+        {
+          text : "Hello World",
+        },
+        {
+          text : "Hi world",
+        },
+      ]
+    }
+  })
 }
+
+// {{#if function}}
+//   stuff
+// {{else}}
+//   stuff
+// {{/if}}
 
 if (Meteor.isServer) {
   Meteor.startup(function () {

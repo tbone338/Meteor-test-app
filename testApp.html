@@ -7,6 +7,8 @@
 
   {{> checkList}}
   {{> buttonList}}
+  {{> buttons}}
+  {{> headings}}
 </body>
 
 <template name="checkList">
@@ -22,5 +24,17 @@
 <template name="buttonList">
   {{#each allButtons}}
     <button class="other" type="button">{{name}}</button>
+  {{/each}}
+</template>
+
+<template name="buttons">
+  {{#if show_button}}
+    <button>{{text}}</button>
+  {{/if}}
+</template>
+
+<template name="headings">
+  {{#each headings}}
+    <h1>{{text}}</h1>
   {{/each}}
 </template>
