@@ -18,16 +18,23 @@ if (Meteor.isClient) {
     items : function() {
       return Items.find();
     },
+  });
+
+  Template.buttonList.helpers({
     allButtons : function() {
       return [
         {
-          name : "Taylor",
+          name : "Johnny",
         },
         {
           name : "Clay",
         },
+        {
+          name : "Taylor",
+        },
       ];
     },
+
   });
 }
 
